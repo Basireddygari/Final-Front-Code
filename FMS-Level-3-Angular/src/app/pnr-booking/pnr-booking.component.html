@@ -1,0 +1,15 @@
+<h1>{{error | json}}</h1>
+<h3>pnr Booking</h3>
+<div style="width: 400px; margin-left: auto; margin-right: auto;">
+ 
+    <div class="form-group">
+      <label for="name">pnr</label>
+      <input type="text" class="form-control" id="pnr" required [(ngModel)]="this.pnr" name="pnr">
+    </div>
+
+   
+    <button type="submit" (click)="pnrBooking(this.pnr)" class="btn btn-success">Submit</button>
+    
+</div>
+
+

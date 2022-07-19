@@ -1,0 +1,56 @@
+<style>
+  #box{
+    width: 50%;
+    height: 50%;
+  }
+  #opacity-3 {
+  opacity:0.6!important;
+}
+
+</style>
+<div class="view" style="background-image: url('https://wallpapercave.com/dwp1x/pgl2z5O.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+<nav class="navbar navbar-dark ">
+    <div class="navbar-brand">
+      <img src="https://wallpapercave.com/dwp1x/pgl2z5O.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+      <b>Flight Reservation System</b>
+    </div>
+    
+  </nav>
+  <div style="padding: 50px;" class="d-flex align-items-center justify-content-center">
+     <div class="shadow-lg p-3 mb-5 bg-dark rounded" id="box" style="opacity: 1;">   
+      <div class="container">
+        <div class="row justify-content-center">
+            <h2  class="font-weight-bold" style="color: white">Welcome to FMS!!</h2>
+        </div>
+      </div><br>
+      <div class="container">
+        <div class="content-center">
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;">
+                    <button type = "button" class = "btn btn-light" (click)="addFlight()">Add A Flight</button><br><br>
+                    <button type = "button" class = "btn btn-light" (click)="viewFlight()">View Flights Available</button><br><br>
+                    <button type = "button" class = "btn btn-light" (click)="addAirport()">Add An AirLine</button><br><br>
+                    <button type = "button" class = "btn btn-light" (click)="viewAirport()">View AirLine Available</button><br><br>
+                    <button type = "button" class = "btn btn-light" (click)="searchflight()">Search for flight</button><br><br>
+           
+                  </div>
+                <div class="col-sm-6" style="text-align: center;">
+                <button type = "button" class = "btn btn-light" (click)="addBooking()">Booking A Flight</button><br><br>
+                <button type = "button" class = "btn btn-light" (click)="viewBooking()">View Booking Details</button><br><br>
+                     <button type = "button" class = "btn btn-light" (click)="deleteBooking()">cancel by pnr</button><br><br>
+                     <button type = "button" class = "btn btn-light" (click)="pnrBooking()">fetch by pnr</button><br><br>
+                     <button type = "button" class = "btn btn-light" (click)="emailBooking()">fetch by email</button><br><br>
+
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="navbar navbar-light bg-light" style="padding: 10px;">
+    Flight Reservation System
+    <span style="float: right;">2020</span>
+</footer>
+</div>
+  

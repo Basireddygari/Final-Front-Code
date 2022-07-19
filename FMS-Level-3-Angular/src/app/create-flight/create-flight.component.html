@@ -1,0 +1,47 @@
+<h3 style="text-align: center;">Add Flight</h3>
+<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+    <!--<div class="form-group">
+      <label for="name">Flight Number</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="flight.id" name="id">
+    </div>-->
+    <div class="form-group">
+      <label for="name">Flight ID</label>
+      <input type="text" placeholder="Flight ID"  #id="ngModel" [class.is-invalid]="id.invalid && id.touched" class="form-control" id="id" required [(ngModel)]="flight.id" name="id">
+        </div>
+
+    <div class="form-group">
+      <label for="name">Source Name</label>
+      <input type="text" placeholder="Source Name" #origin="ngModel" [class.is-invalid]="origin.invalid && origin.touched" class="form-control" id="origin" required [(ngModel)]="flight.origin" name="origin">
+      <small class="text-danger" [class.d-none]="origin.valid || origin.untouched">Carrier name is Required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Destinaton</label>
+      <input type="text" placeholder="Destinaton" #destination="ngModel" [class.is-invalid]="destination.invalid && destination.touched" class="form-control" id="destination" required [(ngModel)]="flight.destination" name="destination">
+      <small class="text-danger" [class.d-none]="destination.valid || destination.untouched">Model is Required</small>
+    </div>
+    <div class="form-group">
+        <label for="name">Seat Capacity</label>
+        <input type="text" placeholder="Seat Capacity" #noOfSeats="ngModel" [class.is-invalid]="noOfSeats.invalid && noOfSeats.touched" class="form-control" id="noOfSeats" required [(ngModel)]="flight.noOfSeats" name="noOfSeats">
+        <small class="text-danger" [class.d-none]="noOfSeats.valid || noOfSeats.untouched">Seat Capacity is Required</small>
+    </div>
+    <div class="form-group">
+      <label for="name">price</label>
+      <input type="text" placeholder="price" class="form-control" id="price" name="price">
+  </div>
+
+  <div class="form-group">
+    <label for="name">timeOfFlight</label>
+    <input type="text" placeholder="timeOfFlight" #timeOfFlight="ngModel" [class.is-invalid]="timeOfFlight.invalid && timeOfFlight.touched" class="form-control" id="timeOfFlight" required [(ngModel)]="flight.timeOfFlight" name="timeOfFlight">
+    <small class="text-danger" [class.d-none]="timeOfFlight.valid || timeOfFlight.untouched">Seat Capacity is Required</small>
+</div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!--<button class="btn btn-success" (click)="newFlight()">Add</button>-->
+</div>

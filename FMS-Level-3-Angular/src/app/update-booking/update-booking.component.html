@@ -1,0 +1,24 @@
+<h3>Update Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">username</label>
+      <input type="text" class="form-control" id="username" required [(ngModel)]="booking.username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="name">email</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="booking.email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="name">mobileNo</label>
+      <input type="text" class="form-control" id="mobileNo" required [(ngModel)]="booking.mobileNo" name="mobileNo">
+    </div>
+    <div class="form-group">
+      <label for="name">noOfSeatsBooked</label>
+      <input type="text" class="form-control" id="noOfSeatsBooked" required [(ngModel)]="booking.noOfSeatsBooked" name="noOfSeatsBooked">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

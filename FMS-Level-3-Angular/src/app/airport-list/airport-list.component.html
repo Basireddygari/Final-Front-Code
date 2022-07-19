@@ -1,0 +1,25 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>List of Airports</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Airlineid</th>
+            <th>Airlinename</th>
+            <th>AirlineLocation</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let airport of airports | async">
+            <td>{{airport.airlineid}}</td>
+            <td>{{airport.airlinename}}</td>
+            <td>{{airport.airlinelocation}}</td>
+          
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>List of bookings</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>pnr</th>
+          <th>status</th>
+          <th>noOfSeatsBooked</th>
+          <th>flightid</th>
+          <th>username</th>
+          <th>email</th>
+          <th>mobileNo</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings | async">
+          <td>{{booking.pnr}}</td>
+          <td>{{booking.status}}</td>
+          <td>{{booking.noOfSeatsBooked}}</td>
+          <td>{{booking.flightid}}</td>
+          <td>{{booking.username}}</td>
+          <td>{{booking.email}}</td>
+          <td>{{booking.mobileNo}}</td>
+       
+        </tr>
+        <tr>
+          <td>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<button (click)="list()" class="btn btn-primary">Back to Booking List</button><br>

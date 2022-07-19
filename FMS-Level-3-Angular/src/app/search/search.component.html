@@ -1,0 +1,8 @@
+<h1>{{error | json}}</h1>
+<div style="width: 400px; margin-left: auto; margin-right: auto;">
+    <label>origin</label><br>
+    <input type="text" #origin><br>
+<label>destination</label><br>
+<input type="text" #destination><br><br>
+<button (click)="search(origin.value,destination.value)" class="btn btn-success" >search</button>
+</div>

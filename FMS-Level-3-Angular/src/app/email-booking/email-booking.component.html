@@ -1,0 +1,15 @@
+<h1>{{error | json}}</h1>
+<h3>Email Booking</h3>
+<div style="width: 400px; margin-left: auto; margin-right: auto;">
+ 
+    <div class="form-group">
+      <label for="name">email</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="this.email" name="email">
+    </div>
+
+   
+    <button type="submit" (click)="emailBooking(this.email)" class="btn btn-success">Submit</button>
+    
+</div>
+
+

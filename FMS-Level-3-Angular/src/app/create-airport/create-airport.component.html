@@ -1,0 +1,28 @@
+<h3 style="text-align: center;">Add a Airport</h3>
+<div [hidden]="submitted" style="width: 400px; margin-left: auto;margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Airline id</label>
+      <input type="text" placeholder="Airline id" required #airlineid="ngModel" [class.is-invalid]="airlineid.invalid && airlineid.touched" class="form-control" id="airlineid" required [(ngModel)]="airport.airlineid" name="airlineid">
+      <small class="text-danger" [class.d-none]="airlineid.valid || airlineid.untouched">Code should contain max 3 letters</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Airline Name</label>
+      <input type="text" placeholder="Airline Name" required #airlinename="ngModel" [class.is-invalid]="airlinename.invalid && airlinename.touched" class="form-control" id="airlinename" required [(ngModel)]="airport.airlinename" name="airlinename">
+      <small class="text-danger" [class.d-none]="airlinename.valid || airlinename.untouched">Name is required</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Airline Location</label>
+      <input type="text" placeholder="Airline Location" required #airlinelocation="ngModel" [class.is-invalid]="airlinelocation.invalid && airlinelocation.touched" class="form-control" id="airlinelocation" required [(ngModel)]="airport.airlinelocation" name="airlinelocation">
+      <small class="text-danger" [class.d-none]="airlinelocation.valid || airlinelocation.untouched">Location is required</small>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
